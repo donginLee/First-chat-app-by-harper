@@ -13,7 +13,7 @@ load_dotenv()  # Load .env variables
 
 if os.environ.get("ENV_STATE") == "prod":
     print("Production mode")
-    broadcast = Broadcast("redis://"+os.environ.get('REDIS_HOST')+":6379")
+    broadcast = Broadcast("redis://"+os.environ.get("REDIS_HOST")+":6379")
 else:
     print("Development mode")
     broadcast = Broadcast("redis://127.0.0.1:6379")
